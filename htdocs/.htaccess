@@ -1,0 +1,7 @@
+ErrorDocument 404 /404.shtml
+
+SetEnv PERL5LIB /opt/openid_1_8/lib/
+
+RewriteEngine On
+RewriteRule ^([A-Za-z0-9]+)$      /user.cgi?username=$1 [L]
+RewriteRule ^xrds/([A-Za-z0-9]+)$ /xrds.cgi?username=$1 [L]
